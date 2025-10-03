@@ -1,4 +1,4 @@
-\# InterDataSoft API REST Server
+# InterDataSoft API REST Server
 
 
 
@@ -14,11 +14,11 @@ This REST API powers the integration between your mobile app and InterDataSoft�
 
 
 
-\## Key Features
+## Key Features
 
 
 
-\- \*\*Photo Capture \& Classification\*\*  
+- Photo Capture \& Classification
 
 &nbsp; Upload and categorize photos directly into your manufacturing workflow:
 
@@ -40,25 +40,25 @@ This REST API powers the integration between your mobile app and InterDataSoft�
 
 
 
-\- \*\*Secure Storage\*\*  
+- Secure Storage
 
 &nbsp; All photos are stored in pre-configured server locations with consistent naming and directory structures.
 
 
 
-\- \*\*Database \& MRP Integration\*\*  
+- Database \& MRP Integration
 
 &nbsp; Automatic linkage of each photo to your SQL database records and InterDataSoft MRP system operations.
 
 
 
-\- \*\*Traceability \& Compliance\*\*  
+- Traceability \& Compliance
 
 &nbsp; Every image is auditable, ensuring visibility across your production chain.
 
 
 
-\- \*\*Collaboration \& Visibility\*\*  
+- Collaboration \& Visibility
 
 &nbsp; Enhance communication between teams by providing instant access to related documentation.
 
@@ -68,7 +68,7 @@ This REST API powers the integration between your mobile app and InterDataSoft�
 
 
 
-\## API Overview
+## API Overview
 
 
 
@@ -76,15 +76,15 @@ The API provides endpoints for:
 
 
 
-\- \*\*Authentication\*\* – Secure login and token-based access  
+- Authentication – Secure login and token-based access  
 
-\- \*\*Photo Upload\*\* – Attach and classify images by workflow type  
+- Photo Upload – Attach and classify images by workflow type  
 
-\- \*\*Metadata Management\*\* – Store and query image attributes  
+- Metadata Management – Store and query image attributes  
 
-\- \*\*Database Sync\*\* – Ensure all photos are tied to the correct MRP entries  
+- Database Sync – Ensure all photos are tied to the correct MRP entries  
 
-\- \*\*Search \& Retrieval\*\* – Query and download photos by job, order, or invoice  
+- *Search \& Retrieval – Query and download photos by job, order, or invoice  
 
 
 
@@ -92,7 +92,7 @@ The API provides endpoints for:
 
 
 
-\## Endpoint Structure
+## Endpoint Structure
 
 
 
