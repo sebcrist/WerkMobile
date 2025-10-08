@@ -2,42 +2,22 @@
 
 
 
-Seamlessly connect your manufacturing workflow with \*\*InterDataSoft MRP Systems\*\*!
+Seamlessly connect your manufacturing workflow with *InterDataSoft MRP Systems* check us out at [InterDataSoft](https://interdatasoft.com/)!
 
 
+This REST API Server is used as support for MobileWerk: a mobile app that allows taking pictures and associationg them to different orders. 
 
-This REST API powers the integration between your mobile app and InterDataSoft’s MRP/ERP ecosystem, ensuring that every captured photo is securely stored, classified, and linked to the right production process.
-
-
+```mermaid
+flowchart LR
+    A[Mobile App] -- sends pictures --> B[REST API Server]
+    B --> C[Database: Link image path to order]
+    B --> D[Stores images locally]
+```
 
 ---
 
 
-
 ## Key Features
-
-
-
-- Photo Capture \& Classification
-
-&nbsp; Upload and categorize photos directly into your manufacturing workflow:
-
-&nbsp; - Orders  
-
-&nbsp; - Shipments  
-
-&nbsp; - Jobs  
-
-&nbsp; - Assemblies  
-
-&nbsp; - Invoices  
-
-&nbsp; - Credits  
-
-&nbsp; - Rebills  
-
-&nbsp; - Quotes  
-
 
 
 - Secure Storage
@@ -45,17 +25,9 @@ This REST API powers the integration between your mobile app and InterDataSoft�
 &nbsp; All photos are stored in pre-configured server locations with consistent naming and directory structures.
 
 
-
 - Database \& MRP Integration
 
-&nbsp; Automatic linkage of each photo to your SQL database records and InterDataSoft MRP system operations.
-
-
-
-- Traceability \& Compliance
-
-&nbsp; Every image is auditable, ensuring visibility across your production chain.
-
+&nbsp; Automatic linkage of each photo to your SQL database records and MRP system operations.
 
 
 - Collaboration \& Visibility
@@ -63,20 +35,16 @@ This REST API powers the integration between your mobile app and InterDataSoft�
 &nbsp; Enhance communication between teams by providing instant access to related documentation.
 
 
-
 ---
 
 
-
 ## API Overview
-
-
 
 The API provides endpoints for:
 
 
 
-- Authentication – Secure login and token-based access  
+- Authentication – Secure login and token-based access  # Will be included in a future release
 
 - Photo Upload – Attach and classify images by workflow type  
 
@@ -84,19 +52,38 @@ The API provides endpoints for:
 
 - Database Sync – Ensure all photos are tied to the correct MRP entries  
 
-- *Search \& Retrieval – Query and download photos by job, order, or invoice  
+- *Search \& Retrieval – Query and download photos by order or other criteria  
 
-
+The previse structure will be shared once the apps are publicly release on the play and apple store
 
 ---
 
 
 
-## Endpoint Structure
+## Installation and Configuration
 
+1. **Head over to the Releases tab** (on the right) and use the provided installer to install the application.  
+   The application will automatically run as a **Windows Service** named `WerkMobileAPIServer`.  
+   Logs can be found in the **Windows Event Viewer**.
 
+2. **Modify the appsettings** to link the application to your table or database.  
+   - The table **must be named** `TrackDoc_Mstr`.  
+   - Use the provided **SQL program** to create it.  
+   - *(The ability to change this may be added in a future version.)*
 
-Will be shared once apps are publicly release on the play and apple store
+---
+
+## Defining Tables
+
+- In the **Tables** folder, you’ll find an example showing how to describe the tables that the server should interact with.  
+- You can include multiple `.json` files — each one is treated as a separate category.
+
+---
+
+## How It Works
+
+The server saves the picture itself locally (will be added the possibility to specify the location, currently it saves it under C/MobileWerk) and saves the path (along with any relevant information from the other tables specified in the `.json` files) into `TrackDoc_Mstr`.  
+
 
 
 
