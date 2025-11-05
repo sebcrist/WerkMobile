@@ -40,21 +40,33 @@ flowchart LR
 
 ## API Overview
 
-The API provides endpoints for:
+### **GET Requests**
+- **`/test`** — Test the connection to the server  
+- **`/categories`** — Get the different categories of orders  
+- **`/drives`** — Get the different save locations  
+- **`/drives/current`** — Get the current drive the server is set to  
+- **`/search`** — Search for an order within a category  
+- **`/images/{imageId}`** — Get the image associated with an ID  
+- **`/images/ids/{docCode}`** — Get the list of image IDs associated with an order  
+- **`/images/remarks/{docCode}`** — Get the comments associated with that order  
 
+---
 
+### **POST Requests**
+- **`/drives`** — Choose which location the server saves the image to  
+- **`/path`** — Create new save locations for the server (drives)  
+- **`/image`** — Save an image on the server and update the database  
 
-- Authentication – Secure login and token-based access  # Will be included in a future release
+---
 
-- Photo Upload – Attach and classify images by workflow type  
+### **PUT Requests**
+- **`/images/remarks/{docCode}`** — Save the comments to an order  
 
-- Metadata Management – Store and query image attributes  
+---
 
-- Database Sync – Ensure all photos are tied to the correct MRP entries  
+### **DELETE Requests**
+- **`/images/{imageId}`** — Remove an image from the database (deletes locally and on the DB)
 
-- *Search \& Retrieval – Query and download photos by order or other criteria  
-
-The previse structure will be shared once the apps are publicly release on the play and apple store
 
 ---
 
