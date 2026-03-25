@@ -1,0 +1,245 @@
+:root {
+  --bg-primary: #f4f7fb;
+  --bg-secondary: #ffffff;
+  --bg-accent: #eaf0f8;
+  --text-primary: #102234;
+  --text-secondary: #445567;
+  --line: #d2deea;
+  --brand: #1c4f83;
+  --brand-strong: #14395f;
+  --shadow: 0 16px 36px rgba(16, 34, 52, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(28, 79, 131, 0.14), transparent 36%),
+    radial-gradient(circle at 88% 86%, rgba(27, 60, 92, 0.14), transparent 34%),
+    linear-gradient(135deg, #f9fbff 0%, #eef3f9 55%, #e8eff8 100%);
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(244, 247, 251, 0.78);
+  border-bottom: 1px solid rgba(210, 222, 234, 0.85);
+  z-index: 2;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand-strong);
+  text-decoration: none;
+}
+
+.info-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--brand);
+  border: 1px solid var(--line);
+  background: var(--bg-secondary);
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  transition: all 180ms ease;
+}
+
+.info-link:hover,
+.info-link:focus-visible {
+  border-color: var(--brand);
+  color: var(--brand-strong);
+  transform: translateY(-1px);
+}
+
+main {
+  padding: 2.5rem 0 1.25rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: clamp(1.4rem, 2.3vw, 2.2rem);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 0.78rem;
+}
+
+h1,
+h2 {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  line-height: 1.18;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0.95rem;
+  font-size: clamp(1.5rem, 2.9vw, 2.65rem);
+  max-width: 22ch;
+}
+
+.lead {
+  color: var(--text-secondary);
+  font-size: clamp(1.02rem, 1.5vw, 1.16rem);
+  margin: 1.05rem 0 0;
+  max-width: 58ch;
+}
+
+.feature-panel {
+  padding: clamp(1.2rem, 1.9vw, 1.6rem);
+  background: linear-gradient(160deg, #ffffff 0%, #f5f9ff 100%);
+}
+
+.feature-panel h2 {
+  font-size: 1.2rem;
+}
+
+.feature-grid {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.feature-grid li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfdff;
+  padding: 0.52rem 0.72rem;
+  font-weight: 600;
+  color: #20384f;
+}
+
+.details {
+  padding-top: 1.4rem;
+}
+
+.details-card {
+  padding: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+.details-card h2 {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+}
+
+.details-card p {
+  margin: 0.85rem 0 0;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+
+.workflow-steps {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: #2a4258;
+}
+
+.workflow-steps li {
+  margin-bottom: 0.4rem;
+}
+
+.workflow-steps strong {
+  color: var(--text-primary);
+}
+
+.site-footer {
+  padding: 1.4rem 0 2.2rem;
+}
+
+.footer-content {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #2f4a63;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 920px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    padding: 0.8rem 0;
+  }
+
+  main {
+    padding-top: 1.45rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    font-size: 1.05rem;
+  }
+
+  .info-link {
+    font-size: 0.87rem;
+    padding: 0.45rem 0.7rem;
+  }
+}

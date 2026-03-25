@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Werkmobile | Photo Workflow Integration</title>
+    <meta
+      name="description"
+      content="Werkmobile lets teams capture photos and link them to orders or any custom document type using a modular SQL-backed setup."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="site-bg" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="Werkmobile home">Werkmobile</a>
+        <a
+          class="info-link"
+          href="#"
+          aria-label="Open app information page"
+          onclick="showInfoPopup(event)"
+        >
+          Information
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <article class="hero-copy card">
+            <p class="eyebrow">Industrial Mobile Platform</p>
+            <h1 id="hero-title">
+              Seamlessly track and audit your manufacturing workflow with Werkmobile!
+            </h1>
+            <p class="lead">
+              Capture a photo, link it to an order, shipment, job, or any document in your own database,
+              and make it instantly traceable across your operation.
+            </p>
+          </article>
+
+          <aside class="feature-panel card" aria-labelledby="features-title">
+            <h2 id="features-title">What You Can Track</h2>
+            <ul class="feature-grid">
+              <li>Orders</li>
+              <li>Shipments</li>
+              <li>Jobs</li>
+              <li>Assemblies</li>
+              <li>Invoices</li>
+              <li>Credits</li>
+              <li>Rebills</li>
+              <li>Quotes</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="details" aria-labelledby="details-title">
+        <div class="container">
+          <article class="card details-card">
+            <h2 id="details-title">How Werkmobile Works</h2>
+            <p>
+              The system is designed to be modular. You configure categories and data mappings so a
+              photo can be attached to the exact record your team cares about, whether that is a
+              work order, shipment, invoice, or another custom document type. The current setup is
+              intended for teams already using a Microsoft SQL Server database which Werkmobile integrates with.
+            </p>
+            <ol class="workflow-steps">
+              <li><strong>Capture:</strong> Take or upload a photo from mobile.</li>
+              <li><strong>Link:</strong> Associate it with the right document in your SQL-backed workflow.</li>
+              <li><strong>Enrich:</strong> Run custom SQL queries to automatically save extra context with the image.</li>
+            </ol>
+            <p>
+              Teams then use the dashboard to filter, review, and organize images by category, user,
+              or operation. This gives production, shipping, and support teams a shared visual record
+              that is easy to search and audit. Support for other relational databases should also be
+              possible with integration adjustments; please contact me if you need that setup.
+            </p>
+            <p>
+              If you do not need tracking and simply want to transfer pictures from your phone to a
+              specific folder on your server, there is also a transfer-only mode in the app.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          Visit the information page on the app (top right) to learn how to set up your own local API
+          server and connect with your existing systems!
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      function showInfoPopup(event) {
+        event.preventDefault();
+        alert(
+          "Sorry! I'm still building the page describing how to set everything up (I'm still polishing the app/system), it should come around July 2026. If its urgent, you can contact me at contact@sebcrist.ca or at https://interdatasoft.com/"
+        );
+      }
+    </script>
+  </body>
+</html>
